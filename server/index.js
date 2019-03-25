@@ -29,6 +29,12 @@ app.use(
   })
 );
 
+app.use(express.static("public"));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "public", "index.html"));
+});
+
 app.get("/", function(req, res) {
   res.send("GraphiQL Deployment for Portfolio.");
 });
