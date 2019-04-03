@@ -11,6 +11,8 @@ const schema = require("./graphql/schema/index");
 
 // app
 const app = express();
+//allow cross-origin requests
+app.use(cors());
 
 //database
 mongoose.connect(
@@ -38,9 +40,6 @@ app.get("*", (req, res) => {
 app.get("/", function(req, res) {
   res.send("GraphiQL Deployment for Portfolio.");
 });
-
-//allow cross-origin requests
-app.use(cors());
 
 app.listen(process.env.PORT || 5000, () => {
   console.log("App listening");

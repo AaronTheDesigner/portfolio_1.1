@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import AddProject from "./AddProject";
 
 class Dashboard extends Component {
   state = {
@@ -22,6 +23,8 @@ class Dashboard extends Component {
         <h1>Dashboard</h1>
         <h1>Welcome {currentUserName}</h1>
         <p>Email: {currentUserEmail}</p>
+        <br />
+        <AddProject />
       </div>
     );
   }
