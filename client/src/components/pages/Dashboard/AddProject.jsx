@@ -1,10 +1,6 @@
 import React, { Component } from "react";
 import { graphql, compose } from "react-apollo";
-import {
-  getProjectQuery,
-  getProjectsQuery,
-  addProjectMutation
-} from "../../../queries/queries";
+import { getProjectsQuery, addProjectMutation } from "../../../queries/queries";
 
 class AddProject extends Component {
   constructor(props) {
@@ -45,17 +41,57 @@ class AddProject extends Component {
 
   render() {
     return (
-      <form>
+      <form onSubmit={this.submitForm.bind(this)}>
         <div>
           <label>Title:</label>
-          <input type="text" />
+          <br />
+          <input
+            type="text"
+            onChange={event => this.setState({ title: event.target.value })}
+          />
         </div>
-        {this.displayProjects()}
+        <div>
+          <label>Subtitle:</label>
+          <br />
+          <input
+            type="text"
+            onChange={event => this.setState({ subtitle: event.target.value })}
+          />
+        </div>
+        <div>
+          <label>Description:</label>
+          <br />
+          <input
+            type="text"
+            onChange={event =>
+              this.setState({ description: event.target.value })
+            }
+          />
+        </div>
+        <div>
+          <label>URL:</label>
+          <br />
+          <input
+            type="text"
+            onChange={event => this.setState({ url: event.target.value })}
+          />
+        </div>
+        <div>
+          <label>GitHub:</label>
+          <br />
+          <input
+            type="text"
+            onChange={event => this.setState({ github: event.target.value })}
+          />
+        </div>
+        <br />
+        <button>+</button>
       </form>
     );
   }
 }
 
-export default compose(graphql(getProjectsQuery, { name: "getProjectsQuery" }))(
-  AddProject
-);
+export default compose(
+  graphql(getProjectsQuery, { name: "getProjectsQuery" }),
+  graphql(addProjectMutation, { name: "addProjectMutation" })
+)(AddProject);
