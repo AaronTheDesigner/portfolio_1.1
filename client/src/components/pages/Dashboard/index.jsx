@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import AddProject from "./AddProject";
+import ProjectList from "./ProjectList";
 
 class Dashboard extends Component {
   state = {
@@ -25,6 +26,7 @@ class Dashboard extends Component {
         <p>Email: {currentUserEmail}</p>
         <br />
         <AddProject />
+        <ProjectList />
       </div>
     );
   }

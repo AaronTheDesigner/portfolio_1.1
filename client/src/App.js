@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Security, SecureRoute, ImplicitCallback } from "@okta/okta-react";
 import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "react-apollo";
+import "./App.css";
 
 import Construction from "./components/pages/construction/index";
 import Home from "./components/pages/Home/index";

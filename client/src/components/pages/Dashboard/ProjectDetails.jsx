@@ -7,13 +7,15 @@ class ProjectDetails extends Component {
     const { project } = this.props.data;
     if (project) {
       return (
-        <div>
-          <h2> {project.title} </h2>
-          <h3> {project.subtitle} </h3>
-          <p> {project.description} </p>
+        <div className="project" >
+          <h2 id="pro_title" > {project.title} </h2>
+          <h3 id="pro_sub" > {project.subtitle} </h3>
+          <p id="pro_description" > {project.description} </p>
           <br />
-          <a href={project.url}>Website</a>
-          <a href={project.github}>GitHub</a>
+          <div id="link">
+            <a href={project.url}>Website</a>
+            <a href={project.github}>GitHub</a>
+          </div>
         </div>
       );
     } else {
@@ -21,7 +23,14 @@ class ProjectDetails extends Component {
     }
   }
   render() {
-    return <div>{this.displayProjectDetails()}</div>;
+    return (
+
+      <div id="project-details">
+
+        {this.displayProjectDetails()}
+
+      </div>
+    )
   }
 }
 
@@ -29,7 +38,7 @@ export default graphql(getProjectQuery, {
   options: props => {
     return {
       variables: {
-        id: props.id
+        id: props.projectId
       }
     };
   }

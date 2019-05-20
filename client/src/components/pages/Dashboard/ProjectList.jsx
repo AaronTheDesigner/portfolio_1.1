@@ -12,16 +12,32 @@ class ProjectList extends Component {
       selected: null
     };
   }
+
   displayProjects() {
     var data = this.props.data;
     if (data.loading) {
-      return <div>Loading Projects...</div>;
+      return <div>Loading Projects ... </div>;
     } else {
       return data.projects.map(project => {
-        return <li key={project.id} on />;
+        return (
+          <li
+            key={project.id}
+            onClick={e => this.setState({ selected: project.id })}>
+            {project.title}
+          </li>
+        );
       });
     }
   }
+
+  render() {
+    return (
+      <div>
+        <ul>{this.displayProjects()}</ul>
+        <ProjectDetails projectId={this.state.selected} />
+      </div>
+    );
+  }
 }
 
-export default ProjectList;
+export default graphql(getProjectsQuery)(ProjectList);

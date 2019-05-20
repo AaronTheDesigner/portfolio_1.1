@@ -1,5 +1,5 @@
 //Packages
-const bcrype = require("bcryptjs");
+const bcrypt = require("bcryptjs");
 
 //Imports
 const Project = require("../../models/Project");
@@ -29,7 +29,9 @@ module.exports = {
     const project = new Project({
       title: args.projectInput.title,
       subtitle: args.projectInput.subtitle,
-      description: args.projectInput.description
+      description: args.projectInput.description,
+      url: args.projectInput.url,
+      github: args.projectInput.github
     }).save();
     return project;
   },

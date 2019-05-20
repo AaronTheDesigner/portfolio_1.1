@@ -1,33 +1,162 @@
-.App {
+h1, h2, h3, h4, h5 {
+  font-family: 'Cinzel Decorative', cursive;
+}
+
+body {
+  overflow-x: hidden; /*--right gutter fix--*/
+  color: black;
+  background-color: #fff3e0;
+}
+
+.jumbotron {
+  background-color: #ccc0ae
+}
+
+.navbar {
+  text-transform: uppercase;
+  background-color: #ccc0ae;
+  font-family: 'Cinzel Decorative', cursive;
+}
+
+.home-wrap {
+  background-color: #ccc0ae;
+  position:relative;
+  width: 100%;
+  height: 100%;
+  opacity: 0.40;
+  -moz-opacity: 20%;
+  -webkit-opacity: 20%;
+  z-index: 2;
+}
+
+.home-inner {
+
+  background-image: url('img/Wallpaper.jpg')
+}
+
+.caption {
+  width: 100%;
+  max-width: 100%;
+  position: absolute;
+  top: 40%;
+  z-index: 1;  
+}
+
+.caption h3,
+.caption h4 {
+  color: black;
+  font-size: 3rem;
+  text-transform: uppercase;
+  padding-bottom: 1rem;
+    
+}
+
+h3.heading {
   text-align: center;
+  font-size: 1.9rem;
+  text-transform: uppercase;
+  margin-bottom: 1.9rem;
+  text-decoration: underline;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+
+
+img.portfolio {
+  max-width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.card {
+  margin: 2rem;
+}
+
+.no-padding .col-md-6 {
+  padding: 0;
+}
+
+.footer .row {
+  background-color: #ccc0ae;
+  color: black;
+  padding: 1rem 2rem 3rem
+}
+
+#admin {
+  background-color: #ccc0ae
+}
+
+#testimonials {
+  padding-top: 2rem;
+}
+
+.btn {
+  border: 2px solid black;
+  background-color: #ccc0ae;
+  color: black;
+  padding: 14px 28px;
+  font-family: 'cinzel decorative', cursive;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.btn:hover {
+  background-color: black;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#project-details {
+  border: 2px solid black;
+  background-color: #ccc0ae;
+  padding: 14px 28px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*--- iOS Landing Page Fix --*/
+.landing {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: table;
+  background: #E9ECEF;
+  z-index: -1;
+}
+.home-wrap {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.home-inner {
+  position: fixed;
+  display: table;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  will-change: transform;
+}
+
+
+
+.project h2,
+.project h3,
+.project p {
+  text-align: center;
+  padding: 1rem 1rem 1rem 1rem;
+
+}
+
+#link {
+  text-align: center;
+  
+}
+
+#link a {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }

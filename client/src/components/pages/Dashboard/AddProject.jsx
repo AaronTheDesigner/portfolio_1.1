@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import { graphql, compose } from "react-apollo";
-import { getProjectsQuery, addProjectMutation } from "../../../queries/queries";
+import {
+  getProjectsQuery,
+  createProjectMutation
+} from "../../../queries/queries";
 
 class AddProject extends Component {
   constructor(props) {
@@ -27,7 +30,7 @@ class AddProject extends Component {
   submitForm(event) {
     event.preventDefault();
     // use the addBookMutation
-    this.props.addProjectMutation({
+    this.props.createProjectMutation({
       variables: {
         title: this.state.title,
         subtitle: this.state.subtitle,
@@ -93,5 +96,5 @@ class AddProject extends Component {
 
 export default compose(
   graphql(getProjectsQuery, { name: "getProjectsQuery" }),
-  graphql(addProjectMutation, { name: "addProjectMutation" })
+  graphql(createProjectMutation, { name: "createProjectMutation" })
 )(AddProject);

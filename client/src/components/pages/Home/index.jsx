@@ -1,6 +1,12 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { withAuth } from "@okta/okta-react";
+import Nav from './Nav';
+import Banner from "./Banner";
+import About from "./About";
+import Testimonials from "./Testimonials";
+import Contact from "./Contact";
+import ProjectDisplay from "./ProjectDisplay";
 
 export default withAuth(
   class Home extends Component {
@@ -33,27 +39,32 @@ export default withAuth(
       if (this.state.authenticated === null) return null;
 
       const mainContent = this.state.authenticated ? (
-        <div>
-          <p className="lead">
-            You have entered the staff portal,{" "}
-            <Link to="/dash">click here</Link>
+        <div id="admin" >
+          <p>
+            You have entered the staff portal, <Link to="/dash">Admin</Link>
           </p>
-          <button className="btn btn-light btn-lg" onClick={this.logout}>
+          <button className="btn btn-light btn-sm text-center" onClick={this.logout}>
             Logout
           </button>
         </div>
       ) : (
-        <div>
-          <p className="lead">Login to access the Dashboard</p>
-          <button className="btn btn-dark btn-lg" onClick={this.login}>
-            Login
+          <div id="admin">
+
+            <button className="btn btn-dark btn-sm text-center" onClick={this.login}>
+              Admin
           </button>
-        </div>
-      );
+            <br />
+          </div>
+        );
 
       return (
         <div>
-          <h1 className="display-4">Home</h1>
+          <Nav />
+          <Banner />
+          <About />
+          <ProjectDisplay />
+          <Testimonials />
+          <Contact />
           {mainContent}
         </div>
       );

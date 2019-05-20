@@ -27,19 +27,21 @@ const getProjectQuery = gql`
   }
 `;
 
-const addProjectMutation = gql`
-  mutation AddProject(
+const createProjectMutation = gql`
+  mutation CreateProject(
     $title: String!
     $subtitle: String!
     $description: String!
     $url: String!
+    $imageUrl: String
     $github: String!
   ) {
-    addProject(
+    createProject(
       title: $title
       subtitle: $subtitle
       description: $description
       url: $url
+      imageUrl: $imageUrl
       github: $github
     ) {
       title
@@ -48,4 +50,4 @@ const addProjectMutation = gql`
   }
 `;
 
-export { getProjectQuery, getProjectsQuery, addProjectMutation };
+export { getProjectQuery, getProjectsQuery, createProjectMutation };
