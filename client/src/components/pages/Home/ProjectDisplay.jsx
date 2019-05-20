@@ -70,12 +70,3 @@ class ProjectDisplay extends Component {
 export default graphql(getProjectsQuery)(ProjectDisplay);
 
 
-{/* <div className="title">
-          <div>
-            <h1 id="pro-title">Projects</h1>
-          </div>
-        </div>
-        <div className="title">
-          <ul className="pro-button">{this.displayProjects()}</ul>
-          <ProjectDetails projectId={this.state.selected} />
-        </div> */}

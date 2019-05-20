@@ -33,7 +33,6 @@ const createProjectMutation = gql`
     $subtitle: String!
     $description: String!
     $url: String!
-    $imageUrl: String
     $github: String!
   ) {
     createProject(
@@ -41,7 +40,6 @@ const createProjectMutation = gql`
       subtitle: $subtitle
       description: $description
       url: $url
-      imageUrl: $imageUrl
       github: $github
     ) {
       title

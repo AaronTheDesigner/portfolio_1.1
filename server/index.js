@@ -16,9 +16,7 @@ app.use(cors());
 
 //database
 mongoose.connect(
-  `mongodb://${process.env.MONGO_USER}:${
-    process.env.MONGO_PASSWORD
-  }@ds331145.mlab.com:31145/${process.env.MONGO_DB}`,
+  `mongodb://Aaron:gokuh123@ds331145.mlab.com:31145/portfolio`,
   { useNewUrlParser: true }
 );
 mongoose.Promise = global.Promise;
@@ -37,7 +35,7 @@ app.get("*", (req, res) => {
   res.sendFile(path.resolve(__dirname, "public", "index.html"));
 });
 
-app.get("/", function(req, res) {
+app.get("/", function (req, res) {
   res.send("GraphiQL Deployment for Portfolio.");
 });
 

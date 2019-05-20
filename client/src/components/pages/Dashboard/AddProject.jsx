@@ -44,7 +44,7 @@ class AddProject extends Component {
 
   render() {
     return (
-      <form onSubmit={this.submitForm.bind(this)}>
+      <form className="container" onSubmit={this.submitForm.bind(this)}>
         <div>
           <label>Title:</label>
           <br />
@@ -64,7 +64,7 @@ class AddProject extends Component {
         <div>
           <label>Description:</label>
           <br />
-          <input
+          <textarea
             type="text"
             onChange={event =>
               this.setState({ description: event.target.value })
