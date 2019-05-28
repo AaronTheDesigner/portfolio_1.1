@@ -10,7 +10,7 @@ const Contact = () => {
                         <div className="col-md-3"></div>
                         <div className="col-md-6 text-center">
                             <h3 className="heading">Contact</h3>
-                            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit natus, commodi reiciendis eveniet alias consequatur assumenda autem officia? Ipsam dolores quaerat nobis hic amet eum eaque magni necessitatibus aperiam nostrum. </p>
+                            <p> I can be contacted by the following methods below. Feel free to call or leave a voicemail, and I'll be sure to return your call by the next business day. Also feel free to send an email, which I am able to respond to sooner. </p>
                             <strong>Location</strong>
                             <p>Charlotte, NC 28270</p>
                             <strong>Contact</strong>

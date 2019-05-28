@@ -4,6 +4,7 @@ import {
   getProjectsQuery,
   createProjectMutation
 } from "../../../queries/queries";
+import { Editor } from '@tinymce/tinymce-react';
 
 class AddProject extends Component {
   constructor(props) {
@@ -42,6 +43,10 @@ class AddProject extends Component {
     });
   }
 
+  handleEditorChange = (event) => {
+    console.log('Content was updated:', event.target.getContent());
+  }
+
   render() {
     return (
       <form className="container" onSubmit={this.submitForm.bind(this)}>
@@ -64,12 +69,7 @@ class AddProject extends Component {
         <div>
           <label>Description:</label>
           <br />
-          <textarea
-            type="text"
-            onChange={event =>
-              this.setState({ description: event.target.value })
-            }
-          />
+          <textarea type="text" onChange={event => this.setState({ description: event.target.value })} />
         </div>
         <div>
           <label>URL:</label>

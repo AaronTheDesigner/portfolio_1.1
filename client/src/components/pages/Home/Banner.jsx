@@ -2,7 +2,7 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <div>
+    <div id="home">
 
       <div className="landing">
         <div className="home-wrap">

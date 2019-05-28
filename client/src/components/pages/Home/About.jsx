@@ -1,4 +1,5 @@
 import React from "react";
+import pic from '../../../img/resume.jpg'
 
 const About = () => {
   return (
@@ -6,7 +7,10 @@ const About = () => {
       <div id="about">
         <div className="jumbotron">
           <h3 className="heading">About</h3>
-
+          <div className="text-center">
+            <img src={pic} alt="" className="rounded" style={{ width: 200 }} />
+          </div>
+          <br />
           <div className="row">
 
             <div className="col-md-4 text-center">
@@ -23,7 +27,7 @@ const About = () => {
             </div>
             <div className="col-md-4 text-center">
               <h4>Ambition</h4>
-              <p>I am seeking a postion as a Jr Developer in a workplace where I can contribute my critical mindset, and my emphasis on collaborative creation is valued. If that is something you seek in a developer, feel free to contact me below.</p>
+              <p>I am seeking a postion as a Jr Developer in a workplace where I can contribute my critical mindset, and where emphasis on creative collaboration is valued. If that is something you seek in a developer, feel free to contact me below.</p>
             </div>
 
           </div>

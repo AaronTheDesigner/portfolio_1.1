@@ -42,11 +42,11 @@ class ProjectDisplay extends Component {
 
             <div className="col-md-6">
               <h4>Books For The March</h4>
-              <img src={bm} alt="" className="portfolio" />
+              <a href="http://www.jayrequard.com"><img src={bm} alt="" className="portfolio" /></a>
             </div>
             <div className="col-md-6">
               <h4>First Ward Child Development Center</h4>
-              <img src={fwcdc} alt="" className="portfolio" />
+              <a href="http://www.firstwardcdc.com"><img src={fwcdc} alt="" className="portfolio" /></a>
             </div>
           </div>
           <br />

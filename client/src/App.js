@@ -28,8 +28,8 @@ class App extends Component {
             client_id="0oajxirqd6BOpJ1Yc0h7"
             redirect_uri={window.location.origin + "/implicit/callback"}
             onAuthRequired={onAuthRequired}>
-            <Route path="/" exact={true} render={Construction} />
-            <Route path="/home" component={Home} />
+            <Route path="/con" exact={true} render={Construction} />
+            <Route path="/" component={Home} />
             <SecureRoute path="/dash" component={Dashboard} />
             <Route
               path="/login"

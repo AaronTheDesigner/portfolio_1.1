@@ -4,7 +4,7 @@ import { withAuth } from "@okta/okta-react";
 import Nav from './Nav';
 import Banner from "./Banner";
 import About from "./About";
-import Testimonials from "./Testimonials";
+//import Testimonials from "./Testimonials";
 import Contact from "./Contact";
 import ProjectDisplay from "./ProjectDisplay";
 
@@ -63,7 +63,7 @@ export default withAuth(
           <Banner />
           <About />
           <ProjectDisplay />
-          <Testimonials />
+          
           <Contact />
           {mainContent}
         </div>
